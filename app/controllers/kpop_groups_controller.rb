@@ -1,0 +1,3 @@
+class KpopGroupsController < ApplicationController
+
+end   
