@@ -1,0 +1,6 @@
+<h1>Here are all K-pop Groups </h1>
+<ul>
+<% @kpop_groups.each do |g| %>
+  <li><a href="/kpop_groups/<%=g.id%>">    <%= g.group %></a></li>  
+<% end %>
+</ul>
