@@ -3,27 +3,22 @@
 end
 
 5.times do 
-    KpopGroup.create(group: Faker::Kpop.iii_groups, member: Faker::Name.first_name, gender: Faker::Demographic.sex, height: Faker::Demographic.height, user_id: 1)
-end
-5.times do 
-    KpopGroup.create(group: Faker::Kpop.iii_groups, member: Faker::Name.first_name, gender: Faker::Demographic.sex, height: Faker::Demographic.height, user_id: 2)
-end
-5.times do 
-    KpopGroup.create(group: Faker::Kpop.iii_groups, member: Faker::Name.first_name, gender: Faker::Demographic.sex, height: Faker::Demographic.height, user_id: 3)
+    KpopGroup.create(group_name: Faker::Kpop.iii_groups, member: Faker::Name.name, gender: Faker::Demographic.sex, height: Faker::Demographic.height(unit: :imperial), fav_quote:Faker::Quotes::Shakespeare.hamlet_quote, user_id: 1)
 end
 
 5.times do 
-    KpopGroup.create(group: Faker::Kpop.iii_groups, member: Faker::Name.first_name, gender: Faker::Demographic.sex, height: Faker::Demographic.height, user_id: 4)
+    KpopGroup.create(group_name: Faker::Kpop.iii_groups, member: Faker::Name.name, gender: Faker::Demographic.sex, height: Faker::Demographic.height(unit: :imperial), fav_quote:Faker::Quotes::Shakespeare.hamlet_quote, user_id: 2)
 end
+
 5.times do 
-    KpopGroup.create(group: Faker::Kpop.iii_groups, member: Faker::Name.first_name, gender: Faker::Demographic.sex, height: Faker::Demographic.height, user_id: 5)
+    KpopGroup.create(group_name: Faker::Kpop.iii_groups, member: Faker::Name.name, gender: Faker::Demographic.sex, height: Faker::Demographic.height(unit: :imperial), fav_quote:Faker::Quotes::Shakespeare.hamlet_quote, user_id: 3)
 end
 
+5.times do 
+    KpopGroup.create(group_name: Faker::Kpop.iii_groups, member: Faker::Name.name, gender: Faker::Demographic.sex, height: Faker::Demographic.height(unit: :imperial), fav_quote:Faker::Quotes::Shakespeare.hamlet_quote, user_id: 4)
+end
 
+5.times do 
+    KpopGroup.create(group_name: Faker::Kpop.iii_groups, member: Faker::Name.name, gender: Faker::Demographic.sex, height: Faker::Demographic.height(unit: :imperial), fav_quote:Faker::Quotes::Shakespeare.hamlet_quote, user_id: 5)
+end
 
-
-# Faker::Name.first_name   
-# Faker::Kpop.iii_groups 
-# Faker::Demographic.height
-# Faker::Demographic.sex 
-   

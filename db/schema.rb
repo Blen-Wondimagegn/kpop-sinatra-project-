@@ -10,15 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_07_225031) do
+ActiveRecord::Schema.define(version: 2020_10_08_071154) do
 
   create_table "kpop_groups", force: :cascade do |t|
-    t.string "group"
-    t.string "members"
+    t.string "group_name"
+    t.string "member"
     t.string "gender"
-    t.float "height"
+    t.string "height"
+    t.string "fav_quote"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "password_digest"
   end
 
 end
