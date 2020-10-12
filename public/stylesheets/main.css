@@ -26,7 +26,7 @@
 }
 
   .wrapper {
-    background: rgb(228, 69, 207);
+    background: whitesmoke;
     -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
     box-shadow: 0 0 10px rgba(0,0,0,.3);
