@@ -1,23 +1,24 @@
 class KpopGroupsController < ApplicationController
-   get '/groups' do  
-        @kpop_groups = KpopGroup.all 
+   get '/kpop_groups' do
+        redirect_if_not_logged_in
+        @groups = KpopGroup.all 
         erb :"kpop_groups/index"
    end
 
-    get '/groups/new' do 
+    get '/kpop_groups/new' do 
+    redirect_if_not_logged_in
       @users = User.all
       erb :"kpop_groups/new"
    end 
   
    get '/kpop_groups/:id' do
-        # redirect_if_not_logged_in
+        redirect_if_not_logged_in
         @group = KpopGroup.find_by_id(params[:id])
         erb :"kpop_groups/show"
-        
     end
 
-    post '/groups' do
-        group = KpopGroup.new(params)
+    post '/kpop_groups' do
+       group = current_user.kpop_groups.build(params)
         if group.save
             redirect "/kpop_groups/#{group.id}"
         else
@@ -28,17 +29,17 @@ class KpopGroupsController < ApplicationController
     end
 
     get '/kpop_groups/:id/edit' do
-        # redirect_if_not_logged_in
+        redirect_if_not_logged_in
         @users = User.all
         @group = KpopGroup.find_by_id(params[:id])
-        # if @group.user.id == current_user.id
+        if @group.user.id == current_user.id
             erb :"kpop_groups/edit"
-        # else
-        #     redirect "/groups"
-        # end
+        else
+            redirect "/kpop_groups"
+        end
     end
 
-     patch '/groups/:id' do
+     patch '/kpop_groups/:id' do
         @group = KpopGroup.find_by_id(params[:id])
         params.delete("_method")
         if @group.update(params)
@@ -46,14 +47,13 @@ class KpopGroupsController < ApplicationController
         else
             redirect "kpop_groups/new"
         end
-         # binding.pry 
       end
 
-    delete '/groups/:id' do
+    delete '/kpop_groups/:id' do
         @group = KpopGroup.find_by_id(params[:id])
-        # if @group.user.id == current_user.id
+        if @group.user.id == current_user.id
            @group.destroy
-        # end
-        redirect "/groups"
+        end
+        redirect "/kpop_groups"
     end
 end   
