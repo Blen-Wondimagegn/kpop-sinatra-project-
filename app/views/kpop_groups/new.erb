@@ -1,17 +1,17 @@
-<h1>Add a k-pop Group</h1>
-
-<form action="/groups" method="POST">
-  <label> K-pop Group Name:</label>
-  <input type="text" name="group"> </br>
-
-  <label> Group member: </label>
-  <input type="text" name="member"> </br>
-
- <label> Gender: </label>
-<input type="text" name="gender"> </br>
-
-<label> Height: </label>
-<input type="integer" name="height"> </br>
-
-  <input type="submit" value="Create">
+ <style>
+body {
+    background-color: white;
+}
+</style>
+<body>
+<div class="wrapper">
+<h1 class="center">Add a k-pop Group</h1>
+<form method="POST" action="/kpop_groups">
+    <p>K-pop Group Name<input type="text" name="group_name"></p>
+    <p>Group Leader<input type="text" name="member"></p>
+    <p>Gender<input type="text" name="gender"></p>
+    <p>Height<input type="text" name="height"></p>
+    <p>Favourite Quote<input type="text" name="fav_quote""></p>
+    <input type="submit" class="btn btn-secondary index-button"> 
 </form>
+</body>

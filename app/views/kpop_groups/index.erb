@@ -1,6 +1,23 @@
-<h1>Here are all K-pop Groups </h1>
-<ul>
-<% @kpop_groups.each do |g| %>
-  <li><a href="/kpop_groups/<%=g.id%>">    <%= g.group %></a></li>  
-<% end %>
-</ul>
+<header>
+  <% if logged_in? %>
+          <div>
+          <i class="small material-icons">account_circle </i><p class="align-right"> Welcome To SM Entertiment  "<%= current_user.username %>"</p></i><br>
+          <a href="/" class="btn btn-secondary index-button"> Log Out</a><br> <br/>
+          <a href="/kpop_groups/new" class="btn btn-secondary index-button"> New Group</a><br> 
+          </div>
+        <% end %>
+        </header>
+
+<style>
+body {
+    background-color: white;
+}
+</style>
+<h1 class= "container center "><b>YG Family's Super Stars </b></h1>
+<body>
+<% @groups.each do |group| %>
+<ul class="collection with-header">
+        <li class="collection-item"><div><p class="white "><a href="/kpop_groups/<%=group.id%>">    <%= group.group_name %></a></p><a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+      </ul>
+    <% end %>
+ </body>

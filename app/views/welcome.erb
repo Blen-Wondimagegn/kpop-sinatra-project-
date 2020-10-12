@@ -1,23 +1,44 @@
+<header><div class="container center" ><img src="/images/max3.jpg"></header>
+ <style>
+ body{
+    background-image: url('/images/BigBang.jpg');
+ }
+ </style>
+<body>
 <div class="container">
-  <header><img src="images/corneal-small.png" class="img-responsive main-image"></header>
-  <div class="col-md-8 col-md-offset-2">
-    <h2>Sinatra Template Default Page</h2>
-
-    <div class="content">
-      <p>Welcome to the Sinatra Template! If you're seeing this page, then everything is working
-      as expected. To get started, delete this file (<code>app/views/welcome.erb)</code> and begin adding
-      your own actions to <code>application_controller.rb</code>. For more information, see the <a href="https://github.com/thebrianemory/corneal">README</a>.</p>
+     <div class="row">
+    <div class="col s6">
+      <div class="card">
+        <div class="card-image">
+          <img src="/images/YG-Entertainment-partnership-1280x720.jpg">
+        </div>
+        <div class="card-content">
+          <p class="b">YG Entertainment (Korean: YG 엔터테인먼트) is a South Korean entertainment company established in 1996 by Yang Hyun-suk.The company operates as a record label, talent agency, music production company, event management and concert production company, and music publishing house. Sign up to learn more!</p>
+        </div>
+        <div class="card-action">
+         <a href="users/signup" class="btn btn-secondary index-button"> Sign Up 🔥</a><br>    
+        </div>    
+      </div>
     </div>
-
-    <div class="sidebar">
-      <h3>Environment</h3>
-      <ul>
-        <li><b>Ruby:</b> <%= RUBY_VERSION %></li>
-        <li><b>Environment:</b> <%= ENV["RACK_ENV"] %></li>
-        <li><b>Server:</b> <%= @env["SERVER_SOFTWARE"] %></li>
-        <li><b>Port:</b> <%= @env["SERVER_PORT"] %></li>
-      </ul>
+  <div class="row">
+    <div class="col s6">
+      <div class="card">
+        <div class="card-image">
+          <img src="images/smkg.png">
+        </div>
+        <div class="card-content">
+          <p class ="b">Check out successful artists that Yang credits for bringing YG Entertainment and the hip hop genre into mainstream Korean music.</p><br>
+        </div>
+        <div class="card-action">
+        <p class ="b">Already have account?</p><br>
+        <a href="/login" class="btn btn-secondary index-button"> Log In 🔥 </a><br> 
+        </div>
+         
+      </div>
     </div>
+  </div>
+  
+</body>
 
   </div>
-</div>
+

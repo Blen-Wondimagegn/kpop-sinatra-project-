@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_08_071154) do
+ActiveRecord::Schema.define(version: 2020_10_09_061724) do
 
   create_table "kpop_groups", force: :cascade do |t|
     t.string "group_name"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2020_10_08_071154) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
+    t.string "username"
   end
 
 end

@@ -1,5 +1,5 @@
 5.times do
-    User.create(email: Faker::Internet.email)
+    User.create(email: Faker::Internet.email, password:"password", username:Faker::Name.first_name)
 end
 
 5.times do 
